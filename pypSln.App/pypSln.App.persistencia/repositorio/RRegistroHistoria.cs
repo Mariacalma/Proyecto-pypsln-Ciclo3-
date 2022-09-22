@@ -12,23 +12,23 @@ namespace pypSln.App.persistencia{
             _appContext = appContext;
         }
         registroHistoria IFRRegistroHistoria.AddRegistroHistoria(registroHistoria registroHistoria) {
-            var registroHistoriaAdicionado = _appContext.registroHistoria.Add(registroHistoria);
+            var registroHistoriaAdicionado = _appContext.registroHistorias.Add(registroHistoria);
             _appContext.SaveChanges();
             return registroHistoriaAdicionado.Entity;
         }
         void IFRRegistroHistoria.DeleteRegistroHistoria(int IdregistroHistoria) {
-            var registroHistoriaEncontrado = _appContext.registroHistoria.FirstOrDefault(p => p.Id == IdregistroHistoria);
-            _appContext.registroHistoria.Remove(registroHistoriaEncontrado);
+            var registroHistoriaEncontrado = _appContext.registroHistorias.FirstOrDefault(p => p.Id == IdregistroHistoria);
+            _appContext.registroHistorias.Remove(registroHistoriaEncontrado);
             _appContext.SaveChanges();
         }
         IEnumerable<registroHistoria> IFRRegistroHistoria.GetAllRegistroHistoria() {
-            return _appContext.registroHistoria;
+            return _appContext.registroHistorias;
         }
         registroHistoria IFRRegistroHistoria.GetRegistroHistoria(int IdregistroHistoria) {
-            return _appContext.registroHistoria.FirstOrDefault(p => p.Id == IdregistroHistoria);
+            return _appContext.registroHistorias.FirstOrDefault(p => p.Id == IdregistroHistoria);
         }
         registroHistoria IFRRegistroHistoria.UpdateRegistroHistoria(registroHistoria registroHistoria) {
-            var registroHistoriaEncontrado = _appContext.registroHistoria.FirstOrDefault(p => p.Id == registroHistoria.Id);
+            var registroHistoriaEncontrado = _appContext.registroHistorias.FirstOrDefault(p => p.Id == registroHistoria.Id);
             if (registroHistoriaEncontrado != null) {
                 registroHistoriaEncontrado.Id = registroHistoria.Id;
                 registroHistoriaEncontrado.Id_propietario = registroHistoria.Id_propietario;

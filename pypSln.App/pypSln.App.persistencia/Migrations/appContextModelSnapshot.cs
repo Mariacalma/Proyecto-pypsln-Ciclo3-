@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using pypSln.App.persistencia;
 
+#nullable disable
+
 namespace pypSln.persistencia.Migrations
 {
     [DbContext(typeof(appContext))]
@@ -15,16 +17,18 @@ namespace pypSln.persistencia.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .UseIdentityColumns()
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.0");
+                .HasAnnotation("ProductVersion", "6.0.0")
+                .HasAnnotation("Relational:MaxIdentifierLength", 128);
+
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
             modelBuilder.Entity("pypSln.App.dominio.historiaClinica", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("Fecha_registro")
                         .HasColumnType("datetime2");
@@ -51,25 +55,22 @@ namespace pypSln.persistencia.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("historiaClinica");
+                    b.ToTable("historiaClinicas");
                 });
 
             modelBuilder.Entity("pypSln.App.dominio.ovino", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("color")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("especie")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -83,25 +84,22 @@ namespace pypSln.persistencia.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ovino");
+                    b.ToTable("ovinos");
                 });
 
-            modelBuilder.Entity("pypSln.App.dominio.persona", b =>
+            modelBuilder.Entity("pypSln.App.dominio.propietario", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Apellidos")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Direccion")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Discriminator")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -119,17 +117,16 @@ namespace pypSln.persistencia.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("persona");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("persona");
+                    b.ToTable("propietarios");
                 });
 
             modelBuilder.Entity("pypSln.App.dominio.registroHistoria", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
@@ -145,15 +142,53 @@ namespace pypSln.persistencia.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("registroHistoria");
+                    b.ToTable("registroHistorias");
+                });
+
+            modelBuilder.Entity("pypSln.App.dominio.veterinario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Apellidos")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Direccion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TarjetaProfesional")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Telefono")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("veterinarios");
                 });
 
             modelBuilder.Entity("pypSln.App.dominio.visitapyp", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Estado")
                         .IsRequired()
@@ -193,25 +228,7 @@ namespace pypSln.persistencia.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("visitapyp");
-                });
-
-            modelBuilder.Entity("pypSln.App.dominio.propietario", b =>
-                {
-                    b.HasBaseType("pypSln.App.dominio.persona");
-
-                    b.HasDiscriminator().HasValue("propietario");
-                });
-
-            modelBuilder.Entity("pypSln.App.dominio.veterinario", b =>
-                {
-                    b.HasBaseType("pypSln.App.dominio.persona");
-
-                    b.Property<string>("TarjetaProfesional")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasDiscriminator().HasValue("veterinario");
+                    b.ToTable("visitapyps");
                 });
 #pragma warning restore 612, 618
         }

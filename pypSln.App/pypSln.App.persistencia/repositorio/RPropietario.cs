@@ -12,26 +12,31 @@ namespace pypSln.App.persistencia{
             _appContext = appContext;
         }
         propietario IFRPropietario.AddPropietario(propietario propietario) {
-            var propietarioAdicionado = _appContext.propietario.Add(propietario);
+            var propietarioAdicionado = _appContext.propietarios.Add(propietario);
             _appContext.SaveChanges();
             return propietarioAdicionado.Entity;
         }
         void IFRPropietario.DeletePropietario(int Idpropietario) {
-            var propietarioEncontrado = _appContext.propietario.FirstOrDefault(p => p.Id == Idpropietario);
+            var propietarioEncontrado = _appContext.propietarios.FirstOrDefault(p => p.Id == Idpropietario);
 
-            _appContext.propietario.Remove(propietarioEncontrado);
+            _appContext.propietarios.Remove(propietarioEncontrado);
             _appContext.SaveChanges();
         }
         IEnumerable<propietario> IFRPropietario.GetAllPropietario() {
-            return _appContext.propietario;
+            return _appContext.propietarios;
         }
         propietario IFRPropietario.GetPropietario(int Idpropietario) {
-            return _appContext.propietario.FirstOrDefault(p => p.Id == Idpropietario);
+            return _appContext.propietarios.FirstOrDefault(p => p.Id == Idpropietario);
         }
         propietario IFRPropietario.UpdatePropietario(propietario propietario) {
-            var propietarioEncontrado = _appContext.propietario.FirstOrDefault(p => p.Id == propietario.Id);
+            var propietarioEncontrado = _appContext.propietarios.FirstOrDefault(p => p.Id == propietario.Id);
             if (propietarioEncontrado != null) {
                 propietarioEncontrado.Id = propietario.Id;
+                propietarioEncontrado.Nombre = propietario.Nombre;
+                propietarioEncontrado.Apellidos = propietario.Apellidos;
+                propietarioEncontrado.Direccion = propietario.Direccion;
+                propietarioEncontrado.Email = propietario.Email;
+                propietarioEncontrado.Telefono = propietario.Telefono;
                 _appContext.SaveChanges();
             }
             return propietarioEncontrado;

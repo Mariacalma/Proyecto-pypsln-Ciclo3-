@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
+#nullable disable
+
 namespace pypSln.persistencia.Migrations
 {
     public partial class inicio : Migration
@@ -8,43 +10,42 @@ namespace pypSln.persistencia.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "historiaClinica",
+                name: "historiaClinicas",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    Fecha_registro = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Id_registro = table.Column<int>(type: "int", nullable: false),
                     Id_propietario = table.Column<int>(type: "int", nullable: false),
                     Id_ovino = table.Column<int>(type: "int", nullable: false),
                     Id_veterinario = table.Column<int>(type: "int", nullable: false),
-                    Fecha_registro = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Recomendaciones = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Formula = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_historiaClinica", x => x.Id);
+                    table.PrimaryKey("PK_historiaClinicas", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "ovino",
+                name: "ovinos",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     color = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    especie = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     raza = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     sexo = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ovino", x => x.Id);
+                    table.PrimaryKey("PK_ovinos", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "persona",
+                name: "propietarios",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -53,17 +54,15 @@ namespace pypSln.persistencia.Migrations
                     Apellidos = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Direccion = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TarjetaProfesional = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_persona", x => x.Id);
+                    table.PrimaryKey("PK_propietarios", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "registroHistoria",
+                name: "registroHistorias",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -75,11 +74,29 @@ namespace pypSln.persistencia.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_registroHistoria", x => x.Id);
+                    table.PrimaryKey("PK_registroHistorias", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "visitapyp",
+                name: "veterinarios",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Apellidos = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Direccion = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TarjetaProfesional = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_veterinarios", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "visitapyps",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -98,26 +115,29 @@ namespace pypSln.persistencia.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_visitapyp", x => x.Id);
+                    table.PrimaryKey("PK_visitapyps", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "historiaClinica");
+                name: "historiaClinicas");
 
             migrationBuilder.DropTable(
-                name: "ovino");
+                name: "ovinos");
 
             migrationBuilder.DropTable(
-                name: "persona");
+                name: "propietarios");
 
             migrationBuilder.DropTable(
-                name: "registroHistoria");
+                name: "registroHistorias");
 
             migrationBuilder.DropTable(
-                name: "visitapyp");
+                name: "veterinarios");
+
+            migrationBuilder.DropTable(
+                name: "visitapyps");
         }
     }
 }

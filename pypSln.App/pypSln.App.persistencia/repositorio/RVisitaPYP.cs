@@ -12,23 +12,23 @@ namespace pypSln.App.persistencia{
             _appContext = appContext;
         }
         visitapyp IFRVisitaPYP.AddVisitaPYP(visitapyp visitapyp) {
-            var visitapypAdicionado = _appContext.visitapyp.Add(visitapyp);
+            var visitapypAdicionado = _appContext.visitapyps.Add(visitapyp);
             _appContext.SaveChanges();
             return visitapypAdicionado.Entity;
         }
         void IFRVisitaPYP.DeleteVisitaPYP(int Idvisitapyp) {
-            var visitapypEncontrado = _appContext.visitapyp.FirstOrDefault(p => p.Id == Idvisitapyp);
-            _appContext.visitapyp.Remove(visitapypEncontrado);
+            var visitapypEncontrado = _appContext.visitapyps.FirstOrDefault(p => p.Id == Idvisitapyp);
+            _appContext.visitapyps.Remove(visitapypEncontrado);
             _appContext.SaveChanges();
         }
         IEnumerable<visitapyp> IFRVisitaPYP.GetAllVisitaPYP() {
-            return _appContext.visitapyp;
+            return _appContext.visitapyps;
         }
         visitapyp IFRVisitaPYP.GetVisitaPYP(int Idvisitapyp) {
-            return _appContext.visitapyp.FirstOrDefault(p => p.Id == Idvisitapyp);
+            return _appContext.visitapyps.FirstOrDefault(p => p.Id == Idvisitapyp);
         }
         visitapyp IFRVisitaPYP.UpdateVisitaPYP(visitapyp visitapyp) {
-            var visitapypEncontrado = _appContext.visitapyp.FirstOrDefault(p => p.Id == visitapyp.Id);
+            var visitapypEncontrado = _appContext.visitapyps.FirstOrDefault(p => p.Id == visitapyp.Id);
             if (visitapypEncontrado != null) {
                 visitapypEncontrado.Id = visitapyp.Id;
                 visitapypEncontrado.Id_ovino = visitapyp.Id_ovino;

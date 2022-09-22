@@ -12,25 +12,30 @@ namespace pypSln.App.persistencia{
             _appContext = appContext;
         }
         veterinario IFRVeterinario.AddVeterinario(veterinario veterinario) {
-            var veterinarioAdicionado = _appContext.veterinario.Add(veterinario);
+            var veterinarioAdicionado = _appContext.veterinarios.Add(veterinario);
             _appContext.SaveChanges();
             return veterinarioAdicionado.Entity;
         }
         void IFRVeterinario.DeleteVeterinario(int Idveterinario) {
-            var veterinarioEncontrado = _appContext.veterinario.FirstOrDefault(p => p.Id == Idveterinario);
-            _appContext.veterinario.Remove(veterinarioEncontrado);
+            var veterinarioEncontrado = _appContext.veterinarios.FirstOrDefault(p => p.Id == Idveterinario);
+            _appContext.veterinarios.Remove(veterinarioEncontrado);
             _appContext.SaveChanges();
         }
         IEnumerable<veterinario> IFRVeterinario.GetAllVeterinario() {
-            return _appContext.veterinario;
+            return _appContext.veterinarios;
         }
         veterinario IFRVeterinario.GetVeterinario(int Idveterinario) {
-            return _appContext.veterinario.FirstOrDefault(p => p.Id == Idveterinario);
+            return _appContext.veterinarios.FirstOrDefault(p => p.Id == Idveterinario);
         }
         veterinario IFRVeterinario.UpdateVeterinario(veterinario veterinario) {
-            var veterinarioEncontrado = _appContext.veterinario.FirstOrDefault(p => p.Id == veterinario.Id);
+            var veterinarioEncontrado = _appContext.veterinarios.FirstOrDefault(p => p.Id == veterinario.Id);
             if (veterinarioEncontrado != null) {
                 veterinarioEncontrado.Id = veterinario.Id;
+                veterinarioEncontrado.Nombre = veterinario.Nombre;
+                veterinarioEncontrado.Apellidos = veterinario.Apellidos;
+                veterinarioEncontrado.Direccion = veterinario.Direccion;
+                veterinarioEncontrado.Email = veterinario.Email;
+                veterinarioEncontrado.Telefono = veterinario.Telefono;
                 veterinarioEncontrado.TarjetaProfesional = veterinario.TarjetaProfesional;
                 _appContext.SaveChanges();
             }
