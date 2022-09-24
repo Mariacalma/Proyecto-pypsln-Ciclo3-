@@ -31,12 +31,48 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3Zpbm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Usuarios/Yordan Tarazona/Documents/MisiónTic/Desarrollo de Software/Proyecto/GitHub/Proyecto-pypsln-Ciclo3/pypSln.App/pypSln.App.frontend/Pages/Ovino_Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3Zpbm9fRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Usuarios/Yordan Tarazona/Documents/MisiónTic/Desarrollo de Software/Proyecto/GitHub/Proyecto-pypsln-Ciclo3/pypSln.App/pypSln.App.frontend/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Usuarios/Yordan Tarazona/Documents/MisiónTic/Desarrollo de Software/Proyecto/GitHub/Proyecto-pypsln-Ciclo3/pypSln.App/pypSln.App.frontend/Pages/Propietario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvcGlldGFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Usuarios/Yordan Tarazona/Documents/MisiónTic/Desarrollo de Software/Proyecto/GitHub/Proyecto-pypsln-Ciclo3/pypSln.App/pypSln.App.frontend/Pages/Propietario_Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvcGlldGFyaW9fRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Usuarios/Yordan Tarazona/Documents/MisiónTic/Desarrollo de Software/Proyecto/GitHub/Proyecto-pypsln-Ciclo3/pypSln.App/pypSln.App.frontend/Pages/Registro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Usuarios/Yordan Tarazona/Documents/MisiónTic/Desarrollo de Software/Proyecto/GitHub/Proyecto-pypsln-Ciclo3/pypSln.App/pypSln.App.frontend/Pages/RGovino.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUkdvdmluby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Usuarios/Yordan Tarazona/Documents/MisiónTic/Desarrollo de Software/Proyecto/GitHub/Proyecto-pypsln-Ciclo3/pypSln.App/pypSln.App.frontend/Pages/RGpropietario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUkdwcm9waWV0YXJpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Usuarios/Yordan Tarazona/Documents/MisiónTic/Desarrollo de Software/Proyecto/GitHub/Proyecto-pypsln-Ciclo3/pypSln.App/pypSln.App.frontend/Pages/RGveterinario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUkd2ZXRlcmluYXJpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Usuarios/Yordan Tarazona/Documents/MisiónTic/Desarrollo de Software/Proyecto/GitHub/Proyecto-pypsln-Ciclo3/pypSln.App/pypSln.App.frontend/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Usuarios/Yordan Tarazona/Documents/MisiónTic/Desarrollo de Software/Proyecto/GitHub/Proyecto-pypsln-Ciclo3/pypSln.App/pypSln.App.frontend/Pages/Veterinario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmV0ZXJpbmFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Usuarios/Yordan Tarazona/Documents/MisiónTic/Desarrollo de Software/Proyecto/GitHub/Proyecto-pypsln-Ciclo3/pypSln.App/pypSln.App.frontend/Pages/Veterinario_Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmV0ZXJpbmFyaW9fRWRpdGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Usuarios/Yordan Tarazona/Documents/MisiónTic/Desarrollo de Software/Proyecto/GitHub/Proyecto-pypsln-Ciclo3/pypSln.App/pypSln.App.frontend/Pages/VisitaPYP.cshtml]

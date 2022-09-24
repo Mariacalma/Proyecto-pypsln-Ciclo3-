@@ -1,0 +1,40 @@
+@page
+@model pypSln.App.frontend.Pages.ListaVeterinarioModel
+@{
+
+}
+<div class="text-center"><h1>Listado de Veterinarios</h1></div>
+
+<table class="table-info" width="80%" height="80%">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Nombre</td>
+            <td>Tarjeta profesional</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var o in Model.veterinario)
+        {
+                    <tr>
+                        <td>@o.Id</td>
+                        <td>@o.Nombre</td>
+                        <td>@o.TarjetaProfesional</td>
+                        <td>
+                        <a class="btn btn-primary table-btn" asp-page="./Details" asp-route-ido="@o.Id">Detalles
+                            <i class="fas fa-info-circle fa-lg" aria-hidden="true"></i>
+                        </a>
+                        </td>
+
+                        <td><div class="btn-group pl-5 pr-5" role="group" aria-label="Basic mixed styles example">
+                            <a class="btn btn-warning d-inline" asp-area="" asp-page="./Edit" asp-route-ido="@o.Id"><i class="fas fa-edit" ></i> Editar</a>
+                            <a class="btn btn-danger d-inline" asp-area="" asp-page="./Eliminar" asp-route-ido="@o.Id"><i class="fas fa-trash-alt"></i> Eliminar</a> 
+                        </div></td>
+
+                    </tr>
+        }
+        </tbody>
+</table>
+<!--<a asp-page=".\ingresar" class="btn btn-primary">Adicionar Propietario</a>-->

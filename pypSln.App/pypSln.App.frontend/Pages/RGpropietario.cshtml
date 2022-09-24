@@ -1,0 +1,65 @@
+@page
+@model pypSln.App.frontend.Pages.propietarioModel
+@{
+
+}
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <div class="text-info"><h1>Crear un propietario</h1></div>
+            <form method="post">
+                <table class="table" width="80%" height="80%">
+                    <!--<tr>
+                        <div>
+                            <td><label asp-for="propietarios.Id" class="from-label"></label></td> 
+                            <td><input asp-for="propietarios.Id" class="from-control" />
+                            <span asp-validation-for="propietarios.Id" class="text-danger"></span></td> 
+                        </div>
+                    </tr>-->
+                    <br>
+                    <tr>
+                        <div>
+                            <td><label asp-for="propietarios.Nombre" class="from-label"></label></td> 
+                            <td><input asp-for="propietarios.Nombre" class="from-control" />
+                            <span asp-validation-for="propietarios.Nombre" class="text-danger"></span></td> 
+                        </div>
+                    </tr>
+                    <br>
+                    <tr>
+                        <div calss="mb-3">
+                            <td><label asp-for="propietarios.Apellidos" class="from-label"></label></td> 
+                            <td><input asp-for="propietarios.Apellidos" class="from-control" />
+                            <span asp-validation-for="propietarios.Apellidos" class="text-danger"></span></td> 
+                        </div>
+                    </tr>
+                    <br>
+                    <tr>
+                        <div calss="mb-3">
+                            <td><label asp-for="propietarios.Telefono" class="from-label"></label></td>
+                            <td><input asp-for="propietarios.Telefono" class="from-control" />
+                            <span asp-validation-for="propietarios.Telefono" class="text-danger"></span></td>
+                        </div>
+                    </tr>
+                    <br>
+                    <tr>
+                        <div calss="mb-3">
+                            <td><label asp-for="propietarios.Email" class="from-label"></label></td>
+                            <td><input asp-for="propietarios.Email" class="from-control" />
+                            <span asp-validation-for="propietarios.Email" class="text-danger"></span></td>
+                        </div>
+                    </tr>
+                    <br>
+                    <tr>
+                        <div calss="mb-3">
+                            <td> <label asp-for="propietarios.Direccion" class="from-label"></label></td> 
+                            <td><input asp-for="propietarios.Direccion" class="from-control" />
+                            <span asp-validation-for="propietarios.Direccion" class="text-danger"></span></td> 
+                        </div>
+                    </tr>
+                    <br>
+                </table>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+            </form>
+        </div>
+    </div>
+</div>

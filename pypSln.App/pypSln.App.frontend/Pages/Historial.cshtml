@@ -1,10 +1,30 @@
 @page
-@model IndexModel
+@model pypSln.App.frontend.Pages.ListaHistorialModel
 @{
-    ViewData["Title"] = "Home page";
 }
+<div class="text-center"><h1>Historial</h1><br></div>
 
-<br>
-
-
-<p>Historial</p>
+<table class="table" width="80%" height="80%">
+    <tr>
+        <td>ID</td>
+        <td>Nombre Ovino</td>
+        <td>ID Propietario</td>
+        <td>ID veterinario</td>
+        <td></td>
+    </tr>
+    @foreach (var o in Model.visitapyp)
+    {
+                <tr>
+                    <td>@o.Id</td>
+                    <td>@o.Id_ovino</td>
+                    <td>@o.Id_propietario</td>
+                    <td>@o.Id_veterinario</td>
+                    <td>
+                    <a class="btn btn-primary table-btn" asp-page="./Details" asp-route-ido="@o.Id">Detalles
+                        <i class="fas fa-info-circle fa-lg" aria-hidden="true"></i>
+                    </a>
+                    </td>
+                </tr>
+    }
+</table>
+<!--<a asp-page=".\ingresar" class="btn btn-primary">Adicionar Propietario</a>-->

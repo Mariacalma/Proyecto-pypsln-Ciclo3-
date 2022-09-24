@@ -1,5 +1,6 @@
 using System;
 
+
 namespace pypSln.App.dominio
 {
     public class historiaClinica

@@ -1,5 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
+  <ItemGroup>
+    <ProjectReference Include="..\pypSln.App.dominio\pypSln.dominio.csproj" />
+    <ProjectReference Include="..\pypSln.App.persistencia\pypSln.persistencia.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>

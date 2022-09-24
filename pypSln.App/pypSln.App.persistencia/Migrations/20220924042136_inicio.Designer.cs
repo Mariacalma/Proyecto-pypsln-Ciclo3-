@@ -12,7 +12,7 @@ using pypSln.App.persistencia;
 namespace pypSln.persistencia.Migrations
 {
     [DbContext(typeof(appContext))]
-    [Migration("20220922052536_inicio")]
+    [Migration("20220924042136_inicio")]
     partial class inicio
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
