@@ -17,15 +17,15 @@ namespace pypSln.App.frontend.Pages
     {
         private readonly IFROvino repositorioOvino;
         [BindProperty]
-        public ovino ovino { set; get; }
+        public ovino ovinos { set; get; }
         public EditarOvinoModel()
         {
-            this.repositorioOvino = new ROvino(new cuidadoAnimal.App.persistencia.appContext());
+            this.repositorioOvino = new ROvino(new pypSln.App.persistencia.appContext());
         }
         public IActionResult OnGet(int idovino)
         {
-            ovino = repositorioOvino.GetOvino(idovino);
-            if (ovino == null)
+            ovinos = repositorioOvino.GetOvino(idovino);
+            if (ovinos == null)
             {
                 return RedirectToPage("./Index");
             }
@@ -36,7 +36,7 @@ namespace pypSln.App.frontend.Pages
         }
         public IActionResult OnPost()
         {
-            ovino = repositorioOvino.UpdateOvino(ovino);
+            ovinos = repositorioOvino.UpdateOvino(ovinos);
             //repositorioPropietario.DeletePropietario(propietario.IdPersona);
             return RedirectToPage("./Ovino");
         }
@@ -47,15 +47,15 @@ namespace pypSln.App.frontend.Pages
     {
         private readonly IFRVeterinario repositorioVeterinario;
         [BindProperty]
-        public veterinario veterinario { set; get; }
+        public veterinario veterinarios { set; get; }
         public EditarVeterinarioModel()
         {
-            this.repositorioVeterinario = new RVeterinario(new cuidadoAnimal.App.persistencia.appContext());
+            this.repositorioVeterinario = new RVeterinario(new pypSln.App.persistencia.appContext());
         }
         public IActionResult OnGet(int idveterinario)
         {
-            veterinario = repositorioVeterinario.GetVeterinario(idveterinario);
-            if (veterinario == null)
+            veterinarios = repositorioVeterinario.GetVeterinario(idveterinario);
+            if (veterinarios == null)
             {
                 return RedirectToPage("./Index");
             }
@@ -66,7 +66,7 @@ namespace pypSln.App.frontend.Pages
         }
         public IActionResult OnPost()
         {
-            veterinario = repositorioVeterinario.UpdateVeterinario(veterinario);
+            veterinarios = repositorioVeterinario.UpdateVeterinario(veterinarios);
             //repositorioPropietario.DeletePropietario(propietario.IdPersona);
             return RedirectToPage("./veterinario");
         }
@@ -78,15 +78,15 @@ namespace pypSln.App.frontend.Pages
     {
         private readonly IFRPropietario repositorioPropietario;
         [BindProperty]
-        public propietario propietario { set; get; }
+        public propietario propietarios { set; get; }
         public EditarPropietarioModel()
         {
-            this.repositorioPropietario = new RPropietario(new cuidadoAnimal.App.persistencia.appContext());
+            this.repositorioPropietario = new RPropietario(new pypSln.App.persistencia.appContext());
         }
         public IActionResult OnGet(int idpropietario)
         {
-            propietario = repositorioPropietario.GetPropietario(idpropietario);
-            if (propietario == null)
+            propietarios = repositorioPropietario.GetPropietario(idpropietario);
+            if (propietarios == null)
             {
                 return RedirectToPage("./Index");
             }
@@ -97,7 +97,7 @@ namespace pypSln.App.frontend.Pages
         }
         public IActionResult OnPost()
         {
-            propietario = repositorioPropietario.UpdatePropietario(propietario);
+            propietarios = repositorioPropietario.UpdatePropietario(propietarios);
             //repositorioPropietario.DeletePropietario(propietario.IdPersona);
             return RedirectToPage("./propietario");
         }
