@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Usuarios\Yordan Tarazona\Documents\MisiónTic\Desarrollo de Software\Proyecto\GitHub\Proyecto-pypsln-Ciclo3\pypSln.App\pypSln.App.frontend
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Usuarios/Yordan Tarazona/Documents/MisiónTic/Desarrollo de Software/Proyecto/GitHub/Proyecto-pypsln-Ciclo3/pypSln.App/pypSln.App.frontend/Pages/Detalles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV0YWxsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Usuarios/Yordan Tarazona/Documents/MisiónTic/Desarrollo de Software/Proyecto/GitHub/Proyecto-pypsln-Ciclo3/pypSln.App/pypSln.App.frontend/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

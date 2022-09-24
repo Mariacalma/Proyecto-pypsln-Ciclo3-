@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CC39ymXX8uZlavC+OTOSiaoIr18jnz1wG+fiTkEnzHY=",
+  "Hash": "LA30fRIXvEfXYOp9zJZtDzIbZKR3wiLiHF9HOZxO9bw=",
   "Source": "pypSln.App.frontend",
   "BasePath": "_content/pypSln.App.frontend",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\Usuarios\\Yordan Tarazona\\Documents\\MisiónTic\\Desarrollo de Software\\Proyecto\\GitHub\\Proyecto-pypsln-Ciclo3\\pypSln.App\\pypSln.App.frontend\\wwwroot\\img\\Registrate.png",
+      "SourceId": "pypSln.App.frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Usuarios\\Yordan Tarazona\\Documents\\MisiónTic\\Desarrollo de Software\\Proyecto\\GitHub\\Proyecto-pypsln-Ciclo3\\pypSln.App\\pypSln.App.frontend\\wwwroot\\",
+      "BasePath": "_content/pypSln.App.frontend",
+      "RelativePath": "img/Registrate.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Registrate.png"
     },
     {
       "Identity": "D:\\Usuarios\\Yordan Tarazona\\Documents\\MisiónTic\\Desarrollo de Software\\Proyecto\\GitHub\\Proyecto-pypsln-Ciclo3\\pypSln.App\\pypSln.App.frontend\\wwwroot\\js\\site.js",

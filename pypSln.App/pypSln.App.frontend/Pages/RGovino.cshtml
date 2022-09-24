@@ -6,17 +6,12 @@
 <div class="container">
     <div class="row">
         <div class="col-8 offset-2">
+            <a asp-page="./Registro" class ="btn-default">Volver</a>
             <div class="text-info"><h1>Crear Ovino</h1></div>
             <form method="post">
                 <table class="table" width="80%" height="80%">
-                    <!--<tr>
-                        <div>
-                            <td><label asp-for="ovinos.Id" class="from-label"></label></td> 
-                            <td><input asp-for="ovinos.Id" class="from-control" />
-                            <span asp-validation-for="ovinos.Id" class="text-danger"></span></td> 
-                        </div>
-                    </tr>-->
-                    <br>
+
+                    
                     <tr>
                         <div>
                             <td><label asp-for="ovinos.Nombre" class="from-label"></label></td> 
@@ -24,7 +19,7 @@
                             <span asp-validation-for="ovinos.Nombre" class="text-danger"></span></td> 
                         </div>
                     </tr>
-                    <br>
+                    
                     <tr>
                         <div calss="mb-3">
                             <td><label asp-for="ovinos.color" class="from-label"></label></td> 
@@ -32,7 +27,7 @@
                             <span asp-validation-for="ovinos.color" class="text-danger"></span></td> 
                         </div>
                     </tr>
-                    <br>
+                    
                     <tr>
                         <div calss="mb-3">
                             <td><label asp-for="ovinos.raza" class="from-label"></label></td>
@@ -40,7 +35,7 @@
                             <span asp-validation-for="ovinos.raza" class="text-danger"></span></td>
                         </div>
                     </tr>
-                    <br>
+                    
                     <tr>
                         <div calss="mb-3">
                             <td><label asp-for="ovinos.sexo" class="from-label"></label></td>
@@ -48,8 +43,8 @@
                             <span asp-validation-for="ovinos.sexo" class="text-danger"></span></td>
                         </div>
                     </tr>
-                    <br>
-                    <br>
+                    
+                    
                     <tr>
                         <div calss="mb-3">
                             <td><label asp-for="ovinos.Id_Propietario" class="from-label"></label></td>
@@ -57,7 +52,7 @@
                             <span asp-validation-for="ovinos.Id_Propietario" class="text-danger"></span></td>
                         </div>
                     </tr>
-                    <br>
+                    
                 </table>
             <button type="submit" class="btn btn-primary">Registrar</button>
             </form>

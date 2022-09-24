@@ -22,9 +22,9 @@ namespace pypSln.App.frontend.Pages
         {
             this.repositorioOvino = new ROvino(new pypSln.App.persistencia.appContext());
         }
-        public IActionResult OnGet(int idovino)
+        public IActionResult OnGet(int Idovino)
         {
-            ovinos = repositorioOvino.GetOvino(idovino);
+            ovinos = repositorioOvino.GetOvino(Idovino);
             if (ovinos == null)
             {
                 return RedirectToPage("./Index");

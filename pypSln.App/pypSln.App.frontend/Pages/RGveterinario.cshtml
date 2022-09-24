@@ -6,17 +6,10 @@
 <div class="container">
     <div class="row">
         <div class="col-8 offset-2">
+            <a asp-page="./Registro" class ="btn-default">Volver</a>
             <div class="text-info"><h1>Crear Veterinario</h1></div>
             <form method="post">
                 <table class="table" width="80%" height="80%">
-                    <!--<tr>
-                        <div>
-                            <td><label asp-for="veterinarios.Id" class="from-label"></label></td> 
-                            <td><input asp-for="veterinarios.Id" class="from-control" />
-                            <span asp-validation-for="veterinarios.Id" class="text-danger"></span></td> 
-                        </div>
-                    </tr>-->
-                    <br>
                     <tr>
                         <div>
                             <td><label asp-for="veterinarios.Nombre" class="from-label"></label></td> 
@@ -24,7 +17,7 @@
                             <span asp-validation-for="veterinarios.Nombre" class="text-danger"></span></td> 
                         </div>
                     </tr>
-                    <br>
+                    
                     <tr>
                         <div calss="mb-3">
                             <td><label asp-for="veterinarios.Apellidos" class="from-label"></label></td> 
@@ -32,7 +25,7 @@
                             <span asp-validation-for="veterinarios.Apellidos" class="text-danger"></span></td> 
                         </div>
                     </tr>
-                    <br>
+                    
                     <tr>
                         <div calss="mb-3">
                             <td><label asp-for="veterinarios.Telefono" class="from-label"></label></td>
@@ -40,7 +33,7 @@
                             <span asp-validation-for="veterinarios.Telefono" class="text-danger"></span></td>
                         </div>
                     </tr>
-                    <br>
+                    
                     <tr>
                         <div calss="mb-3">
                             <td><label asp-for="veterinarios.Email" class="from-label"></label></td>
@@ -48,7 +41,7 @@
                             <span asp-validation-for="veterinarios.Email" class="text-danger"></span></td>
                         </div>
                     </tr>
-                    <br>
+                    
                     <tr>
                         <div calss="mb-3">
                             <td> <label asp-for="veterinarios.Direccion" class="from-label"></label></td> 
@@ -56,8 +49,8 @@
                             <span asp-validation-for="veterinarios.Direccion" class="text-danger"></span></td> 
                         </div>
                     </tr>
-                    <br>
-                    <br>
+                    
+                    
                     <tr>
                         <div calss="mb-3">
                             <td> <label asp-for="veterinarios.TarjetaProfesional" class="from-label"></label></td> 
@@ -65,7 +58,7 @@
                             <span asp-validation-for="veterinarios.TarjetaProfesional" class="text-danger"></span></td> 
                         </div>
                     </tr>
-                    <br>
+                    
                 </table>
             <button type="submit" class="btn btn-primary">Registrar</button>
             </form>

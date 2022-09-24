@@ -5,16 +5,17 @@
 <div class="container">
     <div class="row">
         <div class="col-8 offset-2">
+            <a asp-page="./Ovino" class ="btn-default">Volver</a>
             <div class="text-center"><h1>Editar Ovino</h1></div>
             <form method="post">
                 <table class="table" width="80%" height="80%">
-                    <!--<tr>
+                    <tr>
                         <div>
                             <td><label asp-for="ovinos.Id" class="from-label"></label></td> 
                             <td><input asp-for="ovinos.Id" class="from-control" />
                             <span asp-validation-for="ovinos.Id" class="text-danger"></span></td> 
                         </div>
-                    </tr>-->
+                    </tr>
                     <br>
                     <tr>
                         <div>
@@ -58,7 +59,7 @@
                     </tr>
                     <br>
                 </table>
-            <button type="submit" class="btn btn-primary">Registrar</button>
+            <button type="submit" class="btn btn-primary">Editar</button>
             </form>
         </div>
     </div>

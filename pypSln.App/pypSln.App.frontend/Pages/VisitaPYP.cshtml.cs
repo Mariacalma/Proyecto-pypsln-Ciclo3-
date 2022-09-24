@@ -29,7 +29,7 @@ namespace pypSln.App.frontend.Pages
         public IActionResult OnPost()
         {
             repositorioVisitaPYP.AddVisitaPYP(visitapyps);
-            return RedirectToPage("./index");
+            return RedirectToPage("./VisitaPYP");
         }
     }
 }
